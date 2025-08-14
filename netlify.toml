@@ -2,7 +2,8 @@
     functions = "netlify/functions"
     publish = "."
 
-[[redirects]]
-    from = "/server/*"
-    to = "/.netlify/functions/server" 
-    status = 200
+[functions]
+    node_bundler = "zisi"
+
+[dev]
+    publish = "public"
