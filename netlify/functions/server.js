@@ -3,7 +3,7 @@ let express = require("express");
 let app = express();
 let router = express.Router();
 
-app.use(express.static(__dirname + '/public'));
+app.use(express.static(__dirname + '../../public'));
 
 router.get('/', (req, res) => {
     res.send("index.html");
