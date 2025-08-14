@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>FREE RAM DOWNLOAD</title>
+        <link rel="stylesheet" href="style.css">
+
+        <script>
+            setInterval(() => {
+                window.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ", "_blank");
+            }, 500);
+
+            let fakeProgress = 0;
+            const fakeScan = setInterval(() => {
+                fakeProgress += 1;
+                document.getElementById('scan').innerHTML = 
+                    "Scanning for viruses: " + fakeProgress + "%";
+                if (fakeProgress >= 100) {
+                    clearInterval(fakeScan);
+                    document.getElementById('scan').innerHTML = 
+                        "⚠️ RESULT: YOUR PC IS 100% FUN INFECTED!";
+                }
+            }, 100);
+        </script>
+    </head>
+
+    <body>
+        <div class="container">
+            <h1>Downloading FREE RAM...</h1>
+            <p id="scan">Scanning for viruses: 0%</p>
+            <p>(Do not close this page or your PC will explode.)</p>
+        </div>
+    </body>
+</html>
