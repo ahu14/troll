@@ -8,4 +8,4 @@ app.get('/', (req, res) => {
     res.send("index.html");
 });
 
-export const handler = serverless(app);
+module.exports.handler  = serverless(app);
