@@ -1,8 +1,9 @@
 [build]
-    functions = "functions"
+  command = "npm install"
+  functions = "functions" 
+  publish = "public"
 
-[functions]
-    node_bundler = "zisi"
-
-[dev]
-    publish = "public"
+[[redirects]]
+    from = "/*"
+    status = 200
+    to = "/.netlify/functions/server"

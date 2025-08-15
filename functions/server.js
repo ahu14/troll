@@ -3,11 +3,10 @@ let express = require("express");
 let app = express();
 let router = express.Router();
 
-app.use(express.static(__dirname + '../../public'));
+app.use(express.static('public'));
 
 router.get('/', (req, res) => {
-    res.sendFile("index.html");
+    res.sendFile(__dirname + "/public/index.html");
 });
 
-app.use("/.netlify/functions/server", router);
 module.exports.handler  = serverless(app);
